@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to start participating in documentation？ | 1%Sync&#39;s Blog</title>
+<link rel="shortcut icon" href="https://1PercentSync.github.io/favicon.ico?v=1679803960648">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://1PercentSync.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="How to start participating in documentation？ | 1%Sync&#39;s Blog - Atom Feed" href="https://1PercentSync.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+Register an account at Github. (Optional: to get the benefits of the GitHub Student Developer Pack along with it, pleas..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://1PercentSync.github.io">
+  <img class="avatar" src="https://1PercentSync.github.io/images/avatar.png?v=1679803960648" alt="">
+  </a>
+  <h1 class="site-title">
+    1%Sync&#39;s Blog
+  </h1>
+  <p class="site-description">
+    what?
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              How to start participating in documentation？
+            </h2>
+            <div class="post-info">
+              <span>
+                2023/03/23
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <ol>
+<li>Register an account at <a href="https://github.com/">Github</a>. (Optional: to get the benefits of the <a href="https://education.github.com/pack">GitHub Student Developer Pack</a> along with it, please sign up with your BHCC email address)</li>
+<li>Send me a private message with the email address that linked to your github accout to get access to the private repository.</li>
+<li>Download any text editor, since we're using markdown as mark up language, I recommand <a href="https://github.com/marktext/marktext">MarkText</a>(<a href="https://code.visualstudio.com/">VS Code</a> is fine, it has a better ability to work with Github Desktop (in terms of being able to launch files with one click and show differences faster), however I think it has a better out-of-the-box and specialized experience as Marktext).</li>
+<li>(For pros: If you know how to use git, then use git) Download <a href="https://desktop.github.com/">Github Desktop</a>, follow the in app tutorial to get the basic of pull, push and commit.</li>
+<li>Create a new working branch, named as what you are going to work in</li>
+<li>Pull the document repo to local, set editor work directory to that local directory.</li>
+<li>Start to write.</li>
+<li>Push and Commit.</li>
+<li>When you think it is ready to merge to main branch, for example, a stage has been done, merge it to main branch.</li>
+</ol>
+<p><a href="https://docs.github.com/en/desktop">READ THIS</a></p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'db9f031b6a868a6459bf',
+    clientSecret: 'abc2ad151b17b1c7b3a56f73a5a1409ab437fc21',
+    repo: '1percentsync.github.io',
+    owner: '1PercentSync',
+    admin: ['1PercentSync'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered By&nbsp;<a href="https://gridea.dev/">Gridea</a>,&nbsp;<a href="https://pages.github.com/">Github Pages</a>&nbsp;and Love
+  <a class="rss" href="https://1PercentSync.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://1PercentSync.github.io</id>
+    <title>1%Sync&apos;s Blog</title>
+    <updated>2023-03-26T04:12:43.052Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://1PercentSync.github.io"/>
+    <link rel="self" href="https://1PercentSync.github.io/atom.xml"/>
+    <subtitle>what?</subtitle>
+    <logo>https://1PercentSync.github.io/images/avatar.png</logo>
+    <icon>https://1PercentSync.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, 1%Sync&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[To Create for Pleasure or To Create for Pain?]]></title>
+        <id>https://1PercentSync.github.io/post/to-create-for-pleasure-or-to-create-for-pain/</id>
+        <link href="https://1PercentSync.github.io/post/to-create-for-pleasure-or-to-create-for-pain/">
+        </link>
+        <updated>2023-03-14T21:54:22.000Z</updated>
+        <content type="html"><![CDATA[<p>I watched a record of a painting that impressed me, and the finished painting was the title image of the article.<br>
+What makes this painting stand out to me is the joy of creating. This joy is so contagious that I remembered the first time I made an MMD video with Blender and was moved by Miku dancing in the screen.<br>
+Although there is so little of my creativity in it, the model, motion and camera motion are all shared by others.<br>
+This joy of creation reminds me of the creator gods in the mythology of various peoples, reminds me of a mother giving birth to a child, reminds me of Van Gogh's stars flowing like a swirl in the deep blue sky.</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2UXVO2MRYiEEMQmsD3P5WT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>Late at night, this joy flowed, becoming an almost inaudible undertone in the quiet. The moment the work is completed, the color bursts and rises from the darkness.<br>
+The pursuit of this joy of creation and creating for the joy of creating is, in my opinion, the driving force that allows an artist to work tirelessly. For them, creating is an act of selfish entertainment. Thus, they are able to overcome all the difficulties and constantly improve themselves and their work, thus satisfying their narcissism. This is the source of outstanding work, and of outstanding artists.</p>
+<p>But, their is another motivation of create. To convey and relieve pain. And this has resulted in some of the truly great works in human history.<br>
+<img src="https://1PercentSync.github.io/post-images/1678843468240.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>Of all that is written, I love only what a person hath written with his blood.</p>
+</blockquote>
+<p align="right">—Friedrich Wilhelm Nietzsche</p>
+Whether conveying the pain of others or conveying one's own pain(and often both, which is why such works are great). Such works either documented an era, or reflect the thoughts of a person's struggling, or connect the viewer, the people, enabling us to understand each other better and thus unite. 
+<br><br>
+The reason I mention these two creative motivations is the situation I face as a CG artist, where a large number of creators are facing the anxiety of being replaced commercially by AI in the face of evolving AI technology, from drawing, writing to singing. One day the vast majority of the CG process will be completed by AI, and I will face the problems faced by independent painters today. As technology completes its replacement of technique, the motivation to create becomes more important than ever. 
+<br>
+In his novel "Poetry Cloud", Liu Cixin, the author of "Three Bodies", writes about a scenario in which an alien from a higher civilization uses the entire matter of the solar system to enumerate all possible combinations of words, whereupon it writes the greatest poetry.
+Yet he chose to concede defeat because it was "impossible for him to retrieve them from the poetry cloud". 
+<br>
+Go and retrieve them.]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World & コーヒー🙃]]></title>
+        <id>https://1PercentSync.github.io/post/hello-world-and-kohi/</id>
+        <link href="https://1PercentSync.github.io/post/hello-world-and-kohi/">
+        </link>
+        <updated>2023-03-12T07:13:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Why do these two words have a magic power that turns every ordinary beginning into a newborn joy?<br>
+Why are there so many English words spelled in hiragana in Japanese?<br>
+The second question is a good answer to the first one, curiosity.<br>
+When we say hello to the world, we are curious about new things in the new world.<br>
+It's 3:00 in the middle of the night, a perfect and worst time to blog. I guess that's a simple way to end it.<br>
+<img src="https://1PercentSync.github.io/post-images/1678692205762.png" alt="" loading="lazy"><br>
+Tomorrow, wait, next time, I'll talk about what this picture and what the author said brought to my mind.<br>
+The title will be<br>
+called, Creation Driven by Pleasure and Creation Driven by Pain.</p>
+]]></content>
+    </entry>
+</feed>

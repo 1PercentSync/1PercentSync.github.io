@@ -1,0 +1,408 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Convert | 1%Sync&#39;s Blog</title>
+<link rel="shortcut icon" href="https://1PercentSync.github.io/favicon.ico?v=1679803960648">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://1PercentSync.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Convert | 1%Sync&#39;s Blog - Atom Feed" href="https://1PercentSync.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="Model: GPT-4
+
+Write a CMD script using FFMPEG, when dragging the video onto the script, the script will convert it into ..." />
+    <meta name="keywords" content="Computer Graphic" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://1PercentSync.github.io">
+  <img class="avatar" src="https://1PercentSync.github.io/images/avatar.png?v=1679803960648" alt="">
+  </a>
+  <h1 class="site-title">
+    1%Sync&#39;s Blog
+  </h1>
+  <p class="site-description">
+    what?
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Convert
+            </h2>
+            <div class="post-info">
+              <span>
+                2023/03/22
+              </span>
+              <span>
+                13 min read
+              </span>
+              
+                <a href="https://1PercentSync.github.io/tag/computer-graphic/" class="post-tag">
+                  # Computer Graphic
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>Model: GPT-4</p>
+<blockquote>
+<p>Write a CMD script using FFMPEG, when dragging the video onto the script, the script will convert it into a mp4 encoded into h264, use nvidia hardware encoder to accelerate, and with no noticable visual lost in the same time make the file as small as possible.</p>
+</blockquote>
+<p>To create a CMD script that utilizes FFMPEG to convert a video into an MP4 file encoded with H.264, while taking advantage of NVIDIA's hardware acceleration and preserving visual quality, follow these steps:</p>
+<ol>
+<li>Open a text editor like Notepad.</li>
+<li>Copy and paste the following code into the text editor:</li>
+</ol>
+<p>bash</p>
+<pre><code class="language-bash">@echo off
+set input_file=%1
+set output_file=%~n1_converted.mp4
+set ffmpeg_path=ffmpeg.exe
+
+if not exist &quot;%input_file%&quot; (
+    echo Input file not found.
+    pause
+    exit /b
+)
+
+if not exist &quot;%ffmpeg_path%&quot; (
+    echo FFMPEG not found. Make sure ffmpeg.exe is in the same directory as this script.
+    pause
+    exit /b
+)
+
+echo Converting %input_file% to %output_file%...
+&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset slow -crf 23 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+
+echo Conversion complete.
+pause
+</code></pre>
+<ol start="3">
+<li>Save the file with a <code>.cmd</code> extension, e.g., <code>convert_video.cmd</code>.</li>
+<li>Download FFMPEG (<a href="https://www.ffmpeg.org/download.html">https://www.ffmpeg.org/download.html</a>) and extract the contents of the archive. Place <code>ffmpeg.exe</code> in the same folder as your CMD script.</li>
+<li>Now you can drag and drop a video file onto the <code>convert_video.cmd</code> script. The script will convert the video to an MP4 file encoded with H.264 using NVIDIA hardware acceleration while maintaining visual quality and minimizing the file size.</li>
+</ol>
+<p>Note: Make sure you have the appropriate NVIDIA drivers and an NVIDIA GPU that supports hardware encoding (<a href="https://developer.nvidia.com/ffmpeg">https://developer.nvidia.com/ffmpeg</a>).</p>
+<blockquote>
+<p>Explain the parameters in the command that calls ffmpeg in that line</p>
+</blockquote>
+<p>In the provided CMD script, the line that calls FFMPEG with specific parameters is as follows:</p>
+<p>perl</p>
+<pre><code class="language-perl">&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset slow -crf 23 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+</code></pre>
+<p>Let's break down each parameter:</p>
+<ol>
+<li>
+<p><code>%ffmpeg_path%</code>: This is a variable that contains the path to the <code>ffmpeg.exe</code> executable. In this script, it is expected to be in the same directory as the script.</p>
+</li>
+<li>
+<p><code>-i &quot;%input_file%&quot;</code>: The <code>-i</code> flag specifies the input file to be processed, in this case, the file you dragged onto the script.</p>
+</li>
+<li>
+<p><code>-c:v h264_nvenc</code>: The <code>-c:v</code> flag specifies the codec for video encoding. <code>h264_nvenc</code> is the NVIDIA hardware-accelerated H.264 encoder.</p>
+</li>
+<li>
+<p><code>-preset slow</code>: The <code>-preset</code> option sets the speed of the encoding process. A slower preset will result in better compression and smaller file size at the cost of longer encoding time. Possible values are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, and veryslow.</p>
+</li>
+<li>
+<p><code>-crf 23</code>: The <code>-crf</code> (Constant Rate Factor) flag controls the quality of the output video. Lower values produce better quality but larger files, while higher values produce lower quality but smaller files. The value <code>23</code> is a reasonable compromise between quality and file size.</p>
+</li>
+<li>
+<p><code>-profile:v high</code>: The <code>-profile:v</code> option sets the H.264 profile to be used for encoding. The <code>high</code> profile allows for more advanced compression features, which helps maintain visual quality while minimizing file size.</p>
+</li>
+<li>
+<p><code>-level 4.1</code>: The <code>-level</code> option specifies the H.264 level, which determines the maximum bit rate, frame rate, and resolution allowed for the video. Level 4.1 is a widely compatible choice that allows for 1080p and 4K resolutions.</p>
+</li>
+<li>
+<p><code>-c:a aac</code>: The <code>-c:a</code> flag specifies the codec for audio encoding. In this case, the audio will be encoded using the Advanced Audio Codec (AAC).</p>
+</li>
+<li>
+<p><code>-movflags +faststart</code>: The <code>-movflags</code> option sets additional flags for the output file. <code>+faststart</code> relocates the moov atom to the beginning of the file, allowing for faster playback start times when streaming the video over the internet.</p>
+</li>
+<li>
+<p><code>%output_file%</code>: This is the output file's variable, and it stores the filename of the converted video. It has the same name as the input file with &quot;_converted&quot; appended and an &quot;.mp4&quot; extension.</p>
+</li>
+</ol>
+<blockquote>
+<p>So the only parameter in the code that controls quality is crf, right? Is 23 a conservative enough value to ensure coding quality?</p>
+</blockquote>
+<p>Yes, in the provided FFMPEG command, the <code>-crf</code> parameter is the primary control for output video quality. The CRF value determines the balance between quality and file size. Lower CRF values result in higher quality and larger file sizes, while higher CRF values result in lower quality and smaller file sizes.</p>
+<p>A CRF value of 23 is generally considered a reasonable compromise between quality and file size. For most use cases, this value should be sufficient to maintain good visual quality while still providing a relatively small file size.</p>
+<p>However, if you're working with content that requires a higher quality or if you're concerned about any potential visual artifacts, you can use a lower CRF value. For example, you can try a CRF value of 18 or 20, which should provide even better quality at the expense of larger file sizes.</p>
+<p>Conversely, if you prioritize smaller file sizes over quality, you can increase the CRF value to 26 or 28. Keep in mind that increasing the CRF value may result in noticeable degradation of video quality, especially in visually complex scenes.</p>
+<p>In summary, while CRF 23 is generally a good starting point, you can adjust the value based on your specific needs for quality and file size.</p>
+<blockquote>
+<p>Use 18 to modify the original script and display the full script</p>
+</blockquote>
+<p>Here's the modified CMD script with the CRF value set to 18:</p>
+<p>bash</p>
+<pre><code class="language-bash">@echo off
+set input_file=%1
+set output_file=%~n1_converted.mp4
+set ffmpeg_path=ffmpeg.exe
+
+if not exist &quot;%input_file%&quot; (
+    echo Input file not found.
+    pause
+    exit /b
+)
+
+if not exist &quot;%ffmpeg_path%&quot; (
+    echo FFMPEG not found. Make sure ffmpeg.exe is in the same directory as this script.
+    pause
+    exit /b
+)
+
+echo Converting %input_file% to %output_file%...
+&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset slow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+
+echo Conversion complete.
+pause
+</code></pre>
+<p>The only change in this script compared to the original one is the <code>-crf</code> parameter value, which is now set to 18 instead of 23. This adjustment will result in higher video quality at the expense of larger file sizes.</p>
+<blockquote>
+<p>Continue to modify the script to make it fall back to CPU transcoding in case of transcoding failure</p>
+</blockquote>
+<p>To modify the script so that it falls back to CPU transcoding in case of a failure with the NVIDIA hardware-accelerated encoding, you can use the following updated script:</p>
+<p>cmd</p>
+<pre><code class="language-cmd">@echo off
+set input_file=%1
+set output_file=%~n1_converted.mp4
+set ffmpeg_path=ffmpeg.exe
+
+if not exist &quot;%input_file%&quot; (
+    echo Input file not found.
+    pause
+    exit /b
+)
+
+if not exist &quot;%ffmpeg_path%&quot; (
+    echo FFMPEG not found. Make sure ffmpeg.exe is in the same directory as this script.
+    pause
+    exit /b
+)
+
+echo Converting %input_file% to %output_file% using NVIDIA hardware-accelerated encoding...
+&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset slow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+
+if %errorlevel% neq 0 (
+    echo NVIDIA hardware-accelerated encoding failed. Falling back to CPU encoding...
+    &quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v libx264 -preset slow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+)
+
+echo Conversion complete.
+pause
+</code></pre>
+<p>In this modified script, after the initial FFMPEG command that utilizes the NVIDIA hardware-accelerated H.264 encoder (<code>h264_nvenc</code>), the script checks the <code>%errorlevel%</code> variable. If the error level is not equal to 0, it indicates that the hardware-accelerated encoding failed, and the script proceeds to perform the conversion using the CPU-based H.264 encoder (<code>libx264</code>).</p>
+<blockquote>
+<p>Check that the presets of both encoders are set to ensure the best quality</p>
+</blockquote>
+<p>To ensure the best quality for both the NVIDIA hardware-accelerated H.264 encoder (<code>h264_nvenc</code>) and the CPU-based H.264 encoder (<code>libx264</code>), you should use the highest-quality preset available for each encoder. For both encoders, the highest-quality preset is <code>veryslow</code>. Here is the updated script with the <code>veryslow</code> preset for both encoders:</p>
+<p>cmd</p>
+<pre><code class="language-cmd">@echo off
+set input_file=%1
+set output_file=%~n1_converted.mp4
+set ffmpeg_path=ffmpeg.exe
+
+if not exist &quot;%input_file%&quot; (
+    echo Input file not found.
+    pause
+    exit /b
+)
+
+if not exist &quot;%ffmpeg_path%&quot; (
+    echo FFMPEG not found. Make sure ffmpeg.exe is in the same directory as this script.
+    pause
+    exit /b
+)
+
+echo Converting %input_file% to %output_file% using NVIDIA hardware-accelerated encoding...
+&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset veryslow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+
+if %errorlevel% neq 0 (
+    echo NVIDIA hardware-accelerated encoding failed. Falling back to CPU encoding...
+    &quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v libx264 -preset veryslow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+)
+
+echo Conversion complete.
+pause
+</code></pre>
+<p>Please note that using the <code>veryslow</code> preset for both encoders will increase the encoding time significantly compared to the <code>slow</code> preset. However, it will provide better compression and smaller file sizes without sacrificing video quality. Depending on your specific needs, you may want to consider using a faster preset like <code>slow</code> or <code>medium</code> to balance encoding speed and quality.</p>
+<blockquote>
+<p>change preset of h264_nvenc to p7 and add tune to hq</p>
+</blockquote>
+<p>The <code>h264_nvenc</code> encoder uses a different set of presets than <code>libx264</code>. In this case, the <code>p7</code> preset for <code>h264_nvenc</code> is equivalent to the <code>veryslow</code> preset of <code>libx264</code>. To set the <code>h264_nvenc</code> preset to <code>p7</code> and add the <code>hq</code> tune, use the following modified script:</p>
+<p>cmd</p>
+<pre><code class="language-cmd">@echo off
+set input_file=%1
+set output_file=%~n1_converted.mp4
+set ffmpeg_path=ffmpeg.exe
+
+if not exist &quot;%input_file%&quot; (
+    echo Input file not found.
+    pause
+    exit /b
+)
+
+if not exist &quot;%ffmpeg_path%&quot; (
+    echo FFMPEG not found. Make sure ffmpeg.exe is in the same directory as this script.
+    pause
+    exit /b
+)
+
+echo Converting %input_file% to %output_file% using NVIDIA hardware-accelerated encoding...
+&quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v h264_nvenc -preset p7 -tune hq -cq 18 -profile:v high -level auto -c:a aac -movflags +faststart &quot;%output_file%&quot;
+
+if %errorlevel% neq 0 (
+    echo NVIDIA hardware-accelerated encoding failed. Falling back to CPU encoding...
+    &quot;%ffmpeg_path%&quot; -i &quot;%input_file%&quot; -c:v libx264 -preset veryslow -crf 18 -profile:v high -level 4.1 -c:a aac -movflags +faststart &quot;%output_file%&quot;
+)
+
+echo Conversion complete.
+pause
+</code></pre>
+<p>In this updated script, the <code>-preset p7</code> option is used for the <code>h264_nvenc</code> encoder, and the <code>-tune hq</code> option is added to prioritize high quality. Keep in mind that using the <code>p7</code> preset and the <code>hq</code> tune may increase the encoding time compared to lower presets, but it will provide better video quality.</p>
+<p>Notice: The script in the end has manually fixed by changing level 4.1 of nvenc to level auto(can be deleted cause default auto), and replace crf with cq.<br>
+Comment: The Nvidia encoder is a complex encoder, so the script above is neither fully efficient in making files smaller, nor optimized for streaming, etc.<br>
+Chatgpt performs poorly here could be due to nvidia's multiple updates to drivers and hardware after September 2021, copilot as chatgpt's brother in programming expertise has the potential to be better.</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'db9f031b6a868a6459bf',
+    clientSecret: 'abc2ad151b17b1c7b3a56f73a5a1409ab437fc21',
+    repo: '1percentsync.github.io',
+    owner: '1PercentSync',
+    admin: ['1PercentSync'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered By&nbsp;<a href="https://gridea.dev/">Gridea</a>,&nbsp;<a href="https://pages.github.com/">Github Pages</a>&nbsp;and Love
+  <a class="rss" href="https://1PercentSync.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
