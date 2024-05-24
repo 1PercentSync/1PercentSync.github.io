@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://1PercentSync.github.io</id>
+    <title>1%Sync&apos;s Blog</title>
+    <updated>2024-05-24T04:14:13.195Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://1PercentSync.github.io"/>
+    <link rel="self" href="https://1PercentSync.github.io/atom.xml"/>
+    <subtitle>what?</subtitle>
+    <logo>https://1PercentSync.github.io/images/avatar.png</logo>
+    <icon>https://1PercentSync.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 1%Sync&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[猴子也能懂的重装系统教程]]></title>
+        <id>https://1PercentSync.github.io/post/hou-zi-ye-neng-dong-de-chong-zhuang-xi-tong-jiao-cheng/</id>
+        <link href="https://1PercentSync.github.io/post/hou-zi-ye-neng-dong-de-chong-zhuang-xi-tong-jiao-cheng/">
+        </link>
+        <updated>2023-10-01T18:00:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-前期准备">1. 前期准备</h2>
+<h3 id="11-系统镜像必须">1.1 系统镜像（必须）</h3>
+<ul>
+<li><strong>下载地址</strong>：<a href="http://next.itellyou.cn">next.itellyou.cn 我是链接可以点</a></li>
+<li><strong>推荐版本</strong>：Windows 11
+<ul>
+<li><strong>具体版本</strong>：Windows 11 (business editions), version 22H2 (updated Sep 2023) (x64) - DVD (Chinese-Simplified)</li>
+</ul>
+</li>
+<li><strong>选择原则</strong>：
+<ul>
+<li>选择最新的大版本（如：22H2）</li>
+<li>选择最新的更新日期（如：2023年九月更新）</li>
+<li>推荐选择Business Editions因为：
+<ol>
+<li>它是限制最少的企业版</li>
+<li>支持KMS激活</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>如何下载</strong>：
+<ul>
+<li>可使用ED2K或BT下载方式</li>
+<li>下载工具推荐：<a href="https://motrix.app/">Motrix 我也是链接可以点</a> 或 迅雷（既然都要重装，不怕装个毒瘤了）</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意</strong>：在下载驱动时，请记住显示的具体型号，例如：“小新 Air-14 2020(AMD平台：ARE版)”，后续步骤中会用到。</p>
+<h2 id="12-驱动必须">1.2 驱动（必须）</h2>
+<ul>
+<li>
+<p><strong>下载地址</strong>：</p>
+<ul>
+<li>笔记本：官网 &gt; 支持 &gt; 驱动下载 &gt; 输入型号（注：需要输入序列号而非产品的销售名）
+<ul>
+<li>❌ 联想小新Air-14 (由于每年都有不同款，还有不同芯片和配置)</li>
+<li>✅ MP1SD3HY</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>选择系统</strong>：</p>
+<ul>
+<li>优先选择64位</li>
+<li>与系统版本匹配的优先选择，如Windows 11可用Windows 10的驱动，如果没有Windows 11的选项。</li>
+</ul>
+</li>
+<li>
+<p><strong>需要下载的驱动</strong>：</p>
+<ul>
+<li>❌ 联想驱动管理</li>
+<li>✅ AMD VGA Driver: 芯片组及显卡驱动（核显驱动，包括了CPU相关）</li>
+<li>✅ Audio Driver: 声卡驱动</li>
+<li>✅ Wlan Driver: 无线网卡设备驱动</li>
+<li>✅ Non Intel BlueTooth Driver: 蓝牙驱动</li>
+<li>✅ Cardreader Driver: 读卡器驱动</li>
+<li>✅ Fingerprint Driver: 指纹识别驱动</li>
+<li>✅ Camera Driver: 摄像头驱动</li>
+<li>✅ EM Driver with YMC</li>
+<li>✅ Cursor Speed: 光标速度补丁</li>
+<li>✅ Intelligent Thermal Solution (ITS) Driver: 智能热解决方案驱动</li>
+<li>✅ Lenovo Fn and Function Keys</li>
+<li>❗ <a href="https://iknow.lenovo.com.cn/detail/322535">BIOS升级程序，我是升级指南 可以点</a>：重装系统前更新，按照指南操作。</li>
+</ul>
+</li>
+<li>
+<p><strong>下载原则</strong>：</p>
+<ul>
+<li>谨慎对待厂商自己的程序，例如以&quot;Lenovo&quot;或&quot;联想&quot;开头的程序。确保它们不是恶意软件。例如，不推荐安装驱动管理，硬件相关的如&quot;Lenovo Fn and Function Keys&quot;则是可以安装的。</li>
+<li>针对与设备无关的程序，要先了解其具体用途，以免下载恶意软件。例如，&quot;EM Driver with YMC&quot;和&quot;Intelligent Thermal Solution (ITS) Driver&quot;在初次看到时可能会引起怀疑，但经过查询可以确认是与电源和温度控制相关的驱动。</li>
+<li>BIOS是笔记本的底层软件。虽然更新BIOS通常可以增加稳定性、修复错误和降低功耗，但如果更新失败可能需要返回厂家维修。不过，现在的BIOS更新过程已经相对安全，很少出现故障。</li>
+</ul>
+</li>
+</ul>
+<p>CHATPPT你攻击性太低了，联想这样的流氓就要重拳出击</p>
+<h2 id="13-写镜像的工具">1.3 写镜像的工具</h2>
+<ul>
+<li><strong>下载地址</strong>：<a href="https://rufus.ie/zh/">Rufus 有没有可能我也是链接</a></li>
+</ul>
+<h3 id="使用方法">使用方法：</h3>
+<ol>
+<li>
+<p>在&quot;设备&quot;处选择要写入系统安装镜像的U盘或硬盘。</p>
+<ul>
+<li>❓如果找不到硬盘：尝试选择&quot;显示USB外置硬盘&quot;选项。</li>
+<li>⚠️需不需要先更新BIOS？请先确认。</li>
+</ul>
+</li>
+<li>
+<p>在&quot;引导类型&quot;选择右边的&quot;选择&quot;按钮，将弹出文件选择框。此时选择已下载好的ISO格式的镜像。</p>
+</li>
+<li>
+<p>&quot;分区类型&quot;选择&quot;GPT&quot;，&quot;目标系统类型&quot;选择&quot;UEFI&quot;（非CSM）。*现代笔记本</p>
+</li>
+<li>
+<p>&quot;卷标&quot;、&quot;文件系统&quot;（选择&quot;NTFS&quot;）和&quot;簇大小&quot;，保持默认设置。</p>
+</li>
+<li>
+<p>在&quot;高级格式化选项&quot;中，也保持默认设置。默认应选中&quot;快速格式化&quot;和&quot;创建扩张的标签和图标文件&quot;。</p>
+</li>
+<li>
+<p>点击&quot;开始&quot;。</p>
+</li>
+<li>
+<p>在接下来的步骤（或者接下来的几个步骤），可能会弹出窗口询问是否要解除4GB RAM和TPM限制等。这四个选项都不需要勾选（保持空白状态，如有默认勾选请取消）。</p>
+<ul>
+<li>没错，2020年已经够新了，企业版更是不强制登录那个问题多多的微软账号</li>
+</ul>
+</li>
+<li>
+<p>完成后，会有一个弹窗提示写入完成。</p>
+</li>
+<li>
+<p>关闭程序即可。</p>
+</li>
+</ol>
+<p>PPTZero：评价一眼PPT</p>
+<h2 id="14-其他准备">1.4 其他准备</h2>
+<ol>
+<li>
+<p>插入U盘并新建一个文件夹，可以命名为&quot;Drivers&quot;或&quot;驱动&quot;。</p>
+<ul>
+<li>将之前下载好的驱动复制到这个文件夹中。</li>
+</ul>
+</li>
+<li>
+<p>下载解压缩软件以方便后续操作。</p>
+<ul>
+<li>推荐使用<a href="https://www.7-zip.org/">7-Zip 还有我</a>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="15-可选的准备">1.5 可选的准备</h2>
+<h3 id="office">Office</h3>
+<ul>
+<li>如果需要使用Office，并且没有正版365订阅，可以考虑下载Office 2016。
+<ul>
+<li>最后一个提供官方镜像的批量授权Office版本为2016。</li>
+<li>下载链接：<a href="https://www.landiannews.com/archives/19528.html">Office 2016 Pro Plus 64位 下面那个带下划线的是链接</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="文本编辑器">文本编辑器</h3>
+<ul>
+<li>如希望在安装系统后进行清理预装软件，建议安装一个文本编辑器。
+<ul>
+<li>推荐使用<a href="https://code.visualstudio.com/#alt-downloads">VS Code 上面那个带上，啊不对下划线的是链接</a>。
+<ul>
+<li>选择&quot;System Installer x64&quot;版本。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-进bios恢复出厂看看有没有需要动的设置">1.6 进BIOS恢复出厂，看看有没有需要动的设置</h2>
+<p>不写了，感觉不如手把手教，前面先弄了再继续写<br>
+困<br>
+sdja;egjawpoigj ds k</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[To Create for Pleasure or To Create for Pain?]]></title>
+        <id>https://1PercentSync.github.io/post/to-create-for-pleasure-or-to-create-for-pain/</id>
+        <link href="https://1PercentSync.github.io/post/to-create-for-pleasure-or-to-create-for-pain/">
+        </link>
+        <updated>2023-03-14T21:54:22.000Z</updated>
+        <content type="html"><![CDATA[<p>I watched a record of a painting that impressed me, and the finished painting was the title image of the article.<br>
+What makes this painting stand out to me is the joy of creating. This joy is so contagious that I remembered the first time I made an MMD video with Blender and was moved by Miku dancing in the screen.<br>
+Although there is so little of my creativity in it, the model, motion and camera motion are all shared by others.<br>
+This joy of creation reminds me of the creator gods in the mythology of various peoples, reminds me of a mother giving birth to a child, reminds me of Van Gogh's stars flowing like a swirl in the deep blue sky.</p>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2UXVO2MRYiEEMQmsD3P5WT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>Late at night, this joy flowed, becoming an almost inaudible undertone in the quiet. The moment the work is completed, the color bursts and rises from the darkness.<br>
+The pursuit of this joy of creation and creating for the joy of creating is, in my opinion, the driving force that allows an artist to work tirelessly. For them, creating is an act of selfish entertainment. Thus, they are able to overcome all the difficulties and constantly improve themselves and their work, thus satisfying their narcissism. This is the source of outstanding work, and of outstanding artists.</p>
+<p>But, their is another motivation of create. To convey and relieve pain. And this has resulted in some of the truly great works in human history.<br>
+<img src="https://1PercentSync.github.io/post-images/1678843468240.jpg" alt="" loading="lazy"></p>
+<blockquote>
+<p>Of all that is written, I love only what a person hath written with his blood.</p>
+</blockquote>
+<p align="right">—Friedrich Wilhelm Nietzsche</p>
+Whether conveying the pain of others or conveying one's own pain(and often both, which is why such works are great). Such works either documented an era, or reflect the thoughts of a person's struggling, or connect the viewer, the people, enabling us to understand each other better and thus unite. 
+<br><br>
+The reason I mention these two creative motivations is the situation I face as a CG artist, where a large number of creators are facing the anxiety of being replaced commercially by AI in the face of evolving AI technology, from drawing, writing to singing. One day the vast majority of the CG process will be completed by AI, and I will face the problems faced by independent painters today. As technology completes its replacement of technique, the motivation to create becomes more important than ever. 
+<br>
+In his novel "Poetry Cloud", Liu Cixin, the author of "Three Bodies", writes about a scenario in which an alien from a higher civilization uses the entire matter of the solar system to enumerate all possible combinations of words, whereupon it writes the greatest poetry.
+Yet he chose to concede defeat because it was "impossible for him to retrieve them from the poetry cloud". 
+<br>
+Go and retrieve them.]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World & コーヒー🙃]]></title>
+        <id>https://1PercentSync.github.io/post/hello-world-and-kohi/</id>
+        <link href="https://1PercentSync.github.io/post/hello-world-and-kohi/">
+        </link>
+        <updated>2023-03-10T17:13:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Why do these two words have a magic power that turns every ordinary beginning into a newborn joy?<br>
+Why are there so many English words spelled in hiragana in Japanese?<br>
+The second question is a good answer to the first one, curiosity.<br>
+When we say hello to the world, we are curious about new things in the new world.<br>
+It's 3:00 in the middle of the night, a perfect and worst time to blog. I guess that's a simple way to end it.<br>
+<img src="https://1PercentSync.github.io/post-images/1708574978041.png" alt="" loading="lazy"><br>
+Tomorrow, wait, next time, I'll talk about what this picture and what the author said brought to my mind.<br>
+The title will be<br>
+called, Creation Driven by Pleasure and Creation Driven by Pain.</p>
+]]></content>
+    </entry>
+</feed>
